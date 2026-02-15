@@ -60,11 +60,13 @@ def multilevel_efficiency(connectivity_matrix: np.ndarray, thresholds: np.ndarra
     Compute multilevel efficiency (integration measure).
 
     From paper's multilevel_efficiency.m:
-        For each threshold T:
-            Binary graph = (FC > T)
-            Compute shortest path distances
-            Efficiency = mean of inverse distances
-        Integrate over thresholds using trapezoidal rule
+
+    For each threshold T:
+        Binary graph = (FC > T)
+        Compute shortest path distances
+        Efficiency = mean of inverse distances
+
+    Integrate over thresholds using trapezoidal rule
 
     Args:
         connectivity_matrix: (n_rois, n_rois) connectivity matrix
@@ -110,10 +112,12 @@ def multilevel_clustering(connectivity_matrix: np.ndarray, thresholds: np.ndarra
     Compute multilevel clustering coefficient (segregation measure).
 
     From paper's multilevel_clustering.m:
-        For each threshold T:
-            Binary graph = (FC_regressed > T)
-            Clustering = clustering_coef_bu(graph)
-        Integrate over thresholds
+
+    For each threshold T:
+        Binary graph = (FC_regressed > T)
+        Clustering = clustering_coef_bu(graph)
+
+    Integrate over thresholds
 
     Args:
         connectivity_matrix: (n_rois, n_rois) connectivity matrix (should be regressed)

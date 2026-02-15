@@ -40,7 +40,7 @@ This is where we transform raw brain signals into meaningful patterns that disti
 
 **Connectivity Matrices**: We measure how synchronized different brain regions are with each other. If two regions consistently activate together, they're "connected." This creates a map of functional connections across the entire brain—essentially a snapshot of how the brain's regions communicate.
 
-**ISD (Integration-Segregation Difference)**: This measures the balance between integration (how efficiently information flows across the entire brain network) and segregation (how well distinct brain regions maintain specialized, local processing). ISD quantifies this by computing the difference between these two properties (efficiency minus clustering).
+**ISD**: This is a key brain network metric computed as the difference between efficiency (how well information flows across the entire brain network) and clustering (how much brain regions form tight local groups). Higher ISD values are associated with conscious states.
 
 **Network Summary Statistics**: We also compute basic graph properties from the connectivity matrix—mean degree, strength, and density—to capture the overall topology of the brain network at each state.
 

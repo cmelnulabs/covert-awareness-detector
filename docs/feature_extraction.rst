@@ -26,17 +26,16 @@ that summarise how the brain is organised.
 The Key Metric: ISD
 ====================
 
-The project's central feature is the **Integration-Segregation Difference
-(ISD)**, derived from the reference paper's MATLAB code. It measures the
-balance between two properties of brain networks:
+The project's central feature is **ISD**, derived from the reference paper's
+MATLAB code. It measures the balance between two properties of brain networks:
 
-- **Integration (efficiency)**: How easily information can travel between
-  any two brain regions. High efficiency means any region can communicate
-  with any other region through short paths.
+- **Efficiency**: How easily information can travel between any two brain
+  regions. High efficiency means any region can communicate with any other
+  region through short paths.
 
-- **Segregation (clustering)**: How much brain regions form tight local
-  groups where neighbours are also connected to each other. High clustering
-  means the brain has specialised modules.
+- **Clustering**: How much brain regions form tight local groups where
+  neighbours are also connected to each other. High clustering means the
+  brain has specialised modules.
 
 The ISD is simply:
 
@@ -53,21 +52,28 @@ How ISD Is Computed
 -------------------
 
 1. **Global signal removal**: The strongest shared pattern across all
-   regions is removed from the connectivity matrix. This isolates the
-   more specific, region-to-region connections from the overall background
-   signal.
+   regions is removed from the connectivity matrix. In simpler terms, we
+   subtract out background noise that's common to all brain regions, letting
+   us focus on the specific connections between pairs of regions.
 
 2. **Multilevel efficiency**: The connectivity matrix is converted into a
    series of binary networks at different thresholds (from very lenient to
-   very strict). At each threshold, the average path efficiency is
-   computed. These values are then combined across all thresholds.
+   very strict). This means we test how well brain regions communicate at
+   multiple sensitivity levels—from only counting the strongest connections
+   to including weaker ones. At each level, we measure how efficiently
+   information could travel between regions, then average these scores.
 
 3. **Multilevel clustering**: The same thresholding procedure is applied
-   to the cleaned matrix (after global signal removal). At each threshold,
-   the average clustering coefficient is computed and then combined.
+   to the cleaned matrix (after global signal removal). Here we measure how
+   much brain regions cluster into tight local groups where neighbors are
+   also connected to each other. We again test at multiple sensitivity 
+   levels—looking first at only the strongest connections, then gradually
+   including weaker ones—and average all these clustering measurements
+   together.
 
-4. **ISD**: The difference between the integrated efficiency and the
-   integrated clustering.
+4. **ISD calculation**: The difference between the efficiency and clustering
+   values—subtracting clustering from efficiency gives us a single number
+   that captures the balance between these two brain organization patterns.
 
 
 Additional Features
@@ -126,7 +132,7 @@ requires dimensionality reduction (e.g. PCA) before use.
    from src.features import extract_all_features
 
    features = extract_all_features(connectivity_matrix)
-   print(features['isd'])         # Integration-Segregation Difference
+   print(features['isd'])         # ISD metric
    print(features['efficiency'])  # Multilevel efficiency
    print(features['clustering'])  # Multilevel clustering
 

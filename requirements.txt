@@ -1,27 +1,13 @@
 # Covert Awareness Detector - Dependencies
 #
 # Install:  pip install -r requirements.txt
-# Optional: pip install -r requirements-dev.txt
 
 # ── Core Scientific Computing ───────────────────────────────────────────────
 numpy>=1.24.0
 scipy>=1.10.0
 pandas>=2.0.0
 
-# ── Neuroimaging ────────────────────────────────────────────────────────────
-nibabel>=5.0.0              # NIfTI file I/O
-nilearn>=0.10.0             # fMRI analysis and visualization
-
 # ── Machine Learning ────────────────────────────────────────────────────────
 scikit-learn>=1.3.0         # Classical ML algorithms
 xgboost>=2.0.0              # Gradient boosting framework
 imbalanced-learn>=0.11.0    # Handle imbalanced datasets (SMOTE)
-
-# ── Visualization ───────────────────────────────────────────────────────────
-matplotlib>=3.7.0           # Plotting
-seaborn>=0.12.0             # Statistical visualization
-
-# ── Utilities ───────────────────────────────────────────────────────────────
-tqdm>=4.65.0                # Progress bars
-pyyaml>=6.0                 # Configuration files
-joblib>=1.3.0               # Parallel processing

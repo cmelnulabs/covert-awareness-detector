@@ -16,7 +16,7 @@ Overview
 :Dataset: Michigan Human Anesthesia fMRI Dataset
 :OpenNeuro ID: ds006623
 :DOI: `10.18112/openneuro.ds006623.v1.0.0 <https://doi.org/10.18112/openneuro.ds006623.v1.0.0>`_
-:Participants: 25 healthy volunteers (26 scanned; one excluded for missing timing data)
+:Participants: 25 healthy volunteers
 :License: CC0 1.0 Universal (Public Domain)
 
 The dataset was collected by the University of Michigan Anesthesiology Department
@@ -153,16 +153,15 @@ The 25 subjects used (as defined in the code):
    sub-23  sub-24  sub-25  sub-26  sub-27  sub-28
    sub-29
 
-Subject sub-30 is excluded (missing timing data in the reference paper).
-
 
 References
 ==========
 
-**Original research paper:**
+**Dataset paper:**
 
-- Huang et al. (2018). *Scientific Reports*.
-  `DOI: 10.1038/s41598-018-31436-z <https://doi.org/10.1038/s41598-018-31436-z>`_
+- Huang, Z., Zhang, J., Wu, J., Qin, P., Waite, K., Jackson, T., ... & Hudetz, A. G. (2026). 
+  An open fMRI resource for studying human brain function and covert consciousness under anesthesia. 
+  *Scientific Data*, 13(1). https://doi.org/10.1038/s41597-025-06442-2
 
 **Preprocessing tools:**
 

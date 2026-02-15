@@ -7,22 +7,21 @@ Downloads the Michigan Human Anesthesia fMRI Dataset (OpenNeuro ds006623)
 using direct AWS S3 access. This script downloads only the essential files
 needed for consciousness state detection research.
 
-Dataset: https://openneuro.org/datasets/ds006623
-DOI: 10.18112/openneuro.ds006623.v1.0.0
+- Dataset: https://openneuro.org/datasets/ds006623
+- DOI: 10.18112/openneuro.ds006623.v1.0.0
 
 Essential Files:
+
 - derivatives/Participant_Info.csv (subject demographics and metadata)
 - derivatives/LOR_ROR_Timing.csv (consciousness transition timestamps)
 - derivatives/xcp_d_without_GSR_bandpass_output/
   (preprocessed connectivity data)
 
-Usage:
+Usage::
+
     python download_dataset.py --output-dir /path/to/dataset
     python download_dataset.py --output-dir ./data --verify-checksums
     python download_dataset.py --list-files  # Show what will be downloaded
-
-Author: cmelnulabs
-Date: February 2026
 """
 
 import argparse
@@ -219,8 +218,9 @@ class DatasetDownloader:
 
         Downloads the 4S456Parcels timeseries and motion files needed by
         data_loader.py for all task/run combinations:
-          - task-rest  run-1, run-2
-          - task-imagery run-1, run-2, run-3, run-4
+
+        - task-rest  run-1, run-2
+        - task-imagery run-1, run-2, run-3, run-4
 
         Args:
             subjects: List of subject IDs to download. If None, downloads all.
