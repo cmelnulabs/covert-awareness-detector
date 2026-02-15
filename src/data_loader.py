@@ -165,12 +165,12 @@ def load_condition_3(subject: str) -> np.ndarray:
 
 def load_condition_4(subject: str) -> np.ndarray:
     """
-    Condition 4: imagery POST-ROR (after regaining consciousness).
+    Condition 4: Imagery 3 after ROR (after regaining consciousness).
 
     From paper: run-3 from (ror + 1) to end.
     """
     if subject in SPECIAL_SUBJECTS:
-        # sub-29 has no post-ROR
+        # sub-29 has no data after ROR
         return np.full((N_ROIS, N_ROIS), np.nan)
 
     ror_time = ROR_TIME[subject]
@@ -189,7 +189,7 @@ def load_condition_4(subject: str) -> np.ndarray:
 
 
 def load_condition_5(subject: str) -> np.ndarray:
-    """Condition 5: imagery_run-4 (recovery)."""
+    """Condition 5: Recovery Baseline (Imagery 4)."""
     try:
         timeseries = load_timeseries(subject, "imagery", 4)
         motion = load_motion(subject, "imagery", 4)
@@ -200,7 +200,7 @@ def load_condition_5(subject: str) -> np.ndarray:
 
 
 def load_condition_6(subject: str) -> np.ndarray:
-    """Condition 6: rest_run-2 (recovery resting state)."""
+    """Condition 6: Rest 2."""
     try:
         timeseries = load_timeseries(subject, "rest", 2)
         motion = load_motion(subject, "rest", 2)

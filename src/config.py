@@ -4,7 +4,7 @@ Configuration for the consciousness detection pipeline.
 Derived directly from the paper's MATLAB code (main.m):
   - 446 ROIs from 4S456Parcels atlas
   - xcp_d_without_GSR_bandpass preprocessing
-  - 7 conditions: rest1, imagery1(awake), preLOR, LOR, postROR, imagery4, rest2
+  - 7 conditions: Wakeful Baseline, Imagery 1, PreLOR, LOR, Imagery 3 after ROR, Recovery Baseline, Rest 2
   - Motion censoring: FD column (col 8) < 0.8
 """
 
@@ -50,7 +50,7 @@ ROR_TIME = {
     "sub-29": 2270,
 }
 
-# sub-29 is special: no post-ROR segment (paper uses all of run-3 for LOR)
+# sub-29 is special: no data after ROR in Imagery 3 (paper uses all of run-3 for LOR)
 SPECIAL_SUBJECTS = {"sub-29"}
 
 # ── Scan / atlas parameters ────────────────────────────────────────────────
@@ -64,13 +64,13 @@ TRANSITION_BUFFER = 375     # TRs to skip around LOR/ROR transitions
 
 # ── 7 conditions (FC matrices) per subject ──────────────────────────────────
 CONDITIONS = {
-    0: "rest_run-1",         # resting state baseline
-    1: "imagery_awake",      # imagery run-1 (fully awake, pre-sedation)
-    2: "imagery_preLOR",     # imagery run-2 before loss of responsiveness
-    3: "imagery_LOR",        # imagery runs 2–3 during LOR (unconscious)
-    4: "imagery_postROR",    # imagery run-3 after return of responsiveness
-    5: "imagery_run-4",      # imagery run-4 (recovery)
-    6: "rest_run-2",         # resting state recovery
+    0: "rest_run-1",         # Wakeful Baseline (resting state)
+    1: "imagery_run-1",      # Imagery 1 (fully awake, pre-sedation)
+    2: "imagery_preLOR",     # Imagery 2 before loss of responsiveness
+    3: "imagery_LOR",        # Imagery 2-3 during LOR (unconscious)
+    4: "imagery_afterROR",   # Imagery 3 after return of responsiveness
+    5: "imagery_run-4",      # Recovery Baseline (Imagery 4)
+    6: "rest_run-2",         # Rest 2
 }
 
 CONSCIOUS_CONDITIONS = [0, 1, 2, 4, 5, 6]

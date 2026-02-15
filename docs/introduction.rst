@@ -68,37 +68,13 @@ Our machine learning pipeline transforms fMRI brain scans into automated conscio
 
 .. seealso::
    
-   * :doc:`dataset` — dataset details
-   * :doc:`feature_extraction` — feature methods
-   * :doc:`model_architecture` — model details
-
-
-Relation to Original Research
-==============================
-
-Scientific Foundation
----------------------
-
-This project **builds upon** the neuroscience established by:
-
-**Huang, Hudetz, Mashour et al.** at University of Michigan
-
-Key publication:
-
-- **Huang et al. (2018)** - *Scientific Reports*
-
-  *"Brain imaging reveals covert consciousness during behavioral unresponsiveness induced by propofol"*
-
-  * Discovered covert consciousness in 19% of subjects
-  * Identified anterior insula as key region
-  * Established mental imagery paradigm
-
-.. note::
-   **Credit**: All scientific discoveries, experimental design, and dataset creation belong to the University of Michigan team. Their MATLAB analysis code is available at: https://github.com/janghw4/Anesthesia-fMRI-functional-connectivity-and-balance-calculation
+   * :doc:`dataset` - dataset details
+   * :doc:`feature_extraction` - feature methods
+   * :doc:`model_architecture` - model details
 
 
 Our Contribution
-----------------
+================
 
 A concise, production‑ready Python pipeline that automates consciousness detection from fMRI (feature extraction, ML training, LOSO evaluation) with cross‑subject validation. The underlying neuroscience, experimental design, and dataset are credited to Huang et al. (2018).
 

@@ -77,7 +77,7 @@ segments each subject's data into **7 conditions**:
      - Condition
      - Label
    * - 0
-     - Resting state, run 1 (baseline)
+     - Resting state 1 (Wakeful Baseline)
      - Conscious
    * - 1
      - Imagery, run 1 (awake, pre-sedation)
@@ -89,13 +89,13 @@ segments each subject's data into **7 conditions**:
      - Imagery, runs 2–3 during loss of responsiveness (LOR)
      - **Unconscious**
    * - 4
-     - Imagery, run 3 after return of responsiveness (postROR)
+     - Imagery 3 after return of responsiveness (ROR)
      - Conscious
    * - 5
-     - Imagery, run 4 (recovery)
+     - Imagery 4 (Recovery Baseline)
      - Conscious
    * - 6
-     - Resting state, run 2 (recovery)
+     - Resting state 2
      - Conscious
 
 For binary classification: condition 3 is labelled **unconscious** (0), all
@@ -113,8 +113,7 @@ auditory commands.
 The code skips **375 TRs** around each transition to avoid ambiguous periods
 where the subject is between states.
 
-**Special case:** Subject sub-29 has no postROR segment (condition 4 is marked
-as missing data).
+**Special case:** Subject sub-29 has no data after ROR in Imagery 3 (condition 4 is marked as missing data).
 
 
 Missing Data
