@@ -134,6 +134,6 @@ requires dimensionality reduction (e.g. PCA) before use.
 Next Steps
 ==========
 
-- See :doc:`model_architectures` for how these features are used by the classifiers.
+- See :doc:`model_architecture` for how these features are used by the classifiers.
 - See :doc:`dataset` for information about the fMRI data.
-- See :doc:`quickstart` for a step-by-step tutorial.
+- See :doc:`installation` for setup and running instructions.

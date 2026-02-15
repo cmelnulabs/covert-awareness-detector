@@ -71,13 +71,6 @@ Step 6: Install Dependencies
    pip install -r requirements.txt
 
 
-Step 7: Verify Installation
-----------------------------
-
-.. code-block:: bash
-
-   python -c "import numpy, scipy, pandas, nibabel, nilearn, sklearn, torch; print('✓ Installation successful')"
-
 
 Troubleshooting
 ===============
@@ -99,4 +92,4 @@ If you encounter issues:
 Next Steps
 ==========
 
-See :doc:`quickstart` for dataset download and model training.
+See :doc:`dataset` for dataset details and run `src/train.py` (or `./run_full_training.sh`) to execute the default XGBoost pipeline.
