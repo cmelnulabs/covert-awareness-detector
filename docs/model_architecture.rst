@@ -36,8 +36,8 @@ Available Models
 ================
 
 This codebase implements and runs a single default classifier: **XGBoost**.
-The pipeline applies PCA to the full connectivity matrix, uses SMOTE to
-address class imbalance, and performs threshold tuning after LOSO-CV.
+The pipeline applies PCA to the full connectivity matrix and uses SMOTE to
+address class imbalance.
 
 **Note:** references to Logistic Regression, Random Forest, and SVM have
 been removed from the documentation because those classifiers are not

@@ -89,7 +89,7 @@ requirements.txt          # Core dependencies
 
 ## Model
 
-The default training pipeline (`src/train.py` / `./run_full_training.sh`) trains and validates the **XGBoost** classifier only (full connectivity + PCA + SMOTE + threshold tuning).
+The default training pipeline (`src/train.py` / `./run_full_training.sh`) trains and validates the **XGBoost** classifier only (connectivity + PCA + SMOTE).
 
 
 ## Acknowledgments
